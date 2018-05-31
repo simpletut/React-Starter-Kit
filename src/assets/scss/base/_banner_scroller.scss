@@ -1,0 +1,250 @@
+// Global
+
+.banner_scroller {
+    opacity: 0;
+    overflow: hidden;
+
+    &.loaded {
+        opacity: 1;
+        transition: all .8s ease-in-out;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .slick-slider {
+        position: relative;
+        height: auto;
+
+        .slick-slide {
+            height: auto;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            top: 50%; 
+            @include translateY(-50%);
+            z-index: 1;
+
+
+            &.slick-prev {
+                left: 1rem;
+                display: block;
+                width: auto;
+                height: auto;
+                background: transparent;
+                font-size: 0;
+                line-height: 0;
+                color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &::after {
+                    content: "\f359";
+                    font-family: Font Awesome\ 5 Free;
+                    font-size: 3.0rem;
+                    line-height: normal;
+                    font-weight: 400;
+                    color: #ffffff;
+                }
+
+            }
+
+            &.slick-next {
+                right: 1rem;
+                display: block;
+                width: auto;
+                height: auto;
+                background: transparent;
+                font-size: 0;
+                line-height: 0;
+                color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                &::after {
+                    content: "\f35a";
+                    font-family: Font Awesome\ 5 Free;
+                    font-size: 3.0rem;
+                    line-height: normal;
+                    font-weight: 400;
+                    color: #ffffff;
+                }
+            }
+
+        }
+
+        ul, ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ul {
+            position: absolute;
+            bottom: 1rem; left: 0; right: 0;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            
+            li {
+                display: inline-block;
+                width: auto;
+                margin: 0 .5rem;
+
+                button {
+                    position: relative;
+                    display: block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    background: transparent;
+                    border-radius: 50%;
+                    outline: 0;
+                    font-size: 0;
+                    line-height: 0;
+                    color: transparent;
+                }
+
+                &.slick-active button {
+                    background: $white;
+                }
+
+            }
+
+        }
+
+        
+    }
+
+}
+
+
+// Custom Banners
+
+.topBanner_textOverlay {
+    position: relative;
+    top: 0; left: 0;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+    background-image: url("#{$rooturl}/assets/graphics/homePage/background_img.jpg"); 
+    width: 100%;
+    height: 40.0rem;
+
+    h1 {
+        position: absolute;
+        top: 50%; left: 0; right: 0;
+        margin: 0 auto;
+        font-size: 5rem;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+    }
+
+}
+
+
+// Meet the team 
+
+.meetTheTeam {
+
+    .item {
+        padding: 0 10px;
+
+        .profilePic {
+            display: block;
+            width: 100%;
+            
+            img {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+
+        }
+
+        .details {
+            padding: 2.0rem 0 0 0;
+
+            .name {
+                display: block;
+                width: 100%;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                color: $black;
+                text-align: center;
+                font-weight: 700;
+            }
+
+            .jobRole {
+                display: block;
+                width: 100%;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                color: $black;
+                text-align: center;
+                font-weight: 400;
+            }
+
+        }
+
+    }
+
+    .banner_scroller .slick-slider {
+        padding-bottom: 6rem;
+
+        .slick-arrow {
+        
+            &.slick-prev,
+            &.slick-next {
+                top: auto; bottom: 0; left: 0; right: 0;
+                margin: 0 auto;
+                transform: none;
+                height: auto;
+                width: 3.0rem;
+    
+                &::after {
+                    color: $black;
+                }
+
+                &:hover::after {
+                    color: $red;
+                }
+
+                &:hover::after,
+                &::after {
+                    @include transition(all .4s ease-in-out);
+                }
+    
+            }
+
+
+    
+            &.slick-prev {
+                right: 5rem;
+            }
+    
+            &.slick-next {
+                left: 5rem;
+            }
+    
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 767px){ 
+
+    .topBanner_textOverlay h1 {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+
+}

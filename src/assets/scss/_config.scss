@@ -1,0 +1,24 @@
+// dev/prod - site root
+// $rooturl: 'http://localhost:3000';
+$rooturl: 'https://react-starter-kit-demo.herokuapp.com';
+
+// Base Colors
+
+$txtCol: #4a4a4a;
+$black: #010000;
+$dark_blue: #003c76;
+$white: #ffffff;
+$orange: #f5a637;
+$red: #fe2424;
+
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e) {
+    -webkit-transition:$e;
+    -moz-transition:$e;
+    transition:$e;
+}

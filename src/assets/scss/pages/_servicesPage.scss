@@ -1,0 +1,66 @@
+.services_grid {
+    display: inline-block;
+    width: 100%;
+
+    .item {
+        width: 33.333333%;
+        float: left;
+        padding: 0 10px;
+        margin: 0 auto 4rem;
+
+        .icon {
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            i {
+                font-size: 4.5rem;
+                color: $black;
+            }
+
+        }
+
+        .text {
+            display: block;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+
+            .title {
+                display: block;
+                width: 100%;
+                padding: 2rem 0;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                color: $black;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .desc {
+                display: block;
+                width: 100%;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                color: $black;
+                font-weight: 400;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 767px){  
+
+    .services_grid .item {
+        width: 100%;
+    }
+
+}

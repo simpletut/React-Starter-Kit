@@ -1,0 +1,197 @@
+footer {
+    display: inline-block;
+    width: 100%;
+    margin: 8rem auto 0;
+    padding: 7.5rem 10px;
+    background-color: #343a40;
+
+    .wrap {
+        display: block;
+        position: relative;
+        max-width: 114.0rem;
+        margin: 0 auto;
+        padding: 0;
+
+        .clearFloat {
+            display: inline-block;
+            width: 100%;
+
+            .left {
+                float: left;
+
+                .copyright {
+                    font-size: 1.2rem;
+                    line-height: normal;
+                    color: #fff;
+                }
+
+            }
+    
+            .right {
+                float: right;
+    
+                .footer_nav {
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+                    margin: 0 auto 3rem;
+    
+                    ul, ul li {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                    }
+    
+                    ul {
+                        li {
+                            display: inline-block;
+                            width: auto;
+                            margin: 0 3rem 0 0;
+    
+                            a {
+                                position: relative;
+                                font-size: 1.2rem;
+                                line-height: normal;
+                                color: #fff;
+                                text-transform: uppercase;
+    
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 0;
+                                    height: 1px;
+                                    bottom: -.6rem;
+                                    left: 0;
+                                    background: #f5a637;
+                                    @include transition(all .4s ease-in-out);
+                                }
+    
+                                &:hover {
+                                    color: $orange;
+    
+                                    &::after {
+                                        width: 100%;
+                                        @include transition(all .4s ease-in-out);
+                                    }
+    
+                                }
+    
+                            }
+    
+    
+    
+                        }
+                    }
+    
+    
+    
+                }
+    
+                .social_icons {
+                    text-align: right;
+    
+                    ul, ul li {
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                    }
+    
+                    ul {
+                        li {
+                            display: inline-block;
+                            width: auto;
+                            margin: 0 3rem 0 0;
+    
+                            a {
+                                font-size: 2rem;
+                                line-height: normal;
+                                color: $white;
+    
+                                &:hover {
+                                    color: $orange;
+                                }
+    
+                            }
+                        }
+                    }
+    
+                }
+    
+    
+            }
+        }
+        
+        
+
+
+
+
+    }
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 767px){
+
+    footer .wrap .clearFloat {
+        
+        .left {
+            float: none;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto 2rem;
+            
+            .copyright {
+                font-size: 1.6rem;
+                line-height: normal;
+            }
+
+        }
+
+        .right {
+            float: none;
+            width: 100%;
+            text-align: center;
+
+            .footer_nav ul li {
+                display: block;
+                width: 100%;
+                padding: 1rem 0;
+                margin: 0;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    @include transition(none);
+                    font-size: 1.4rem;
+                    line-height: normal;
+                    text-align: center;
+
+                    &::after {
+                        display: none;
+                    }
+
+                }
+            }
+
+            .social_icons {
+                text-align: center;
+
+                ul li {
+                    margin: 0;
+                    padding: 2rem 2.5rem 0;
+                }
+
+            }
+
+        }
+
+    }
+
+    
+
+}

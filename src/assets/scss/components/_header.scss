@@ -1,0 +1,328 @@
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: block;
+    width: 100%;
+    height: 10.0rem;
+    margin: 0 auto;
+    padding: 0;
+    @include transition(.2s ease-in-out);
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $white;
+        display: block;
+        top: -100%; left: 0; right: 0;
+        margin: 0 auto;
+        @include transition(.2s ease-in-out);
+        z-index: -1;
+    }
+
+    .wrap {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 90.0rem;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+        background-color: transparent;
+
+        .logo_wrap {
+            display: block;
+            width: 5rem;
+            height: 100%;
+            position: absolute;
+            top: 0; left: 10px;
+            @include transition(.2s ease-in-out);
+            z-index: 20;
+    
+            a {
+                display: block;
+                height: 100%;
+    
+                img {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    @include translateY(-50%);
+                    @include transition(.2s ease-in-out);
+    
+                    &.dark {
+                        opacity: 0;
+                        z-index: 0;
+                    }
+    
+                    &.white {
+                        z-index: 1;
+                    }
+                }
+    
+            }
+    
+        }
+    
+        .nav_wrap {
+            position: absolute;
+            top: 50%; right: 10px;
+            @include translateY(-50%);
+    
+            nav {
+    
+                ul, li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+    
+                ul {
+                    li {
+                        display: inline-block;
+                        margin: 0 4rem 0 0;
+    
+                        &.last {
+                            margin-right: 0;
+                        }
+    
+                        a {
+                            position: relative;
+                            font-size: 1.2rem;
+                            line-height: normal;
+                            color: $white;
+                            text-transform: uppercase;
+    
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 0;
+                                height: 1px;
+                                bottom: -.6rem; left: 0;
+                                background: $orange;
+                                @include transition(all .4s ease-in-out);
+                            }
+    
+                            &:hover, &.active {
+                                color: $orange;
+    
+                                &::after {
+                                    width: 100%;
+                                    @include transition(all .4s ease-in-out);
+                                }
+    
+                            }
+    
+                            
+    
+                        }
+    
+                    }
+                }
+    
+    
+    
+            }
+        }
+
+        .mobile {
+            display: none;
+        }
+
+    }
+
+    &.scrollActive {
+        @include transition(.2s ease-in-out);
+        height: 7rem;
+
+        &::after {
+            top: 0;
+            @include transition(.2s ease-in-out);
+        }
+
+        .wrap {
+            .logo_wrap {
+
+                a img {
+                    @include transition(.2s ease-in-out);
+        
+                    &.dark {
+                        opacity: 1;
+                    }
+                    &.white {
+                        opacity: 0;
+                    }
+                }
+
+            }
+
+            .nav_wrap nav ul li a {
+                color: $black;
+
+                &:hover, &.active {
+                    color: $orange;
+                }
+
+            }
+
+        }
+
+        
+
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    header {
+        height: 7.0rem !important;
+
+        &::after {
+            top: 0 !important;
+            z-index: 19;
+        }
+        
+        &.scrollActive {
+            
+            .wrap .nav_wrap li a {
+                color: $white !important;
+            }
+
+        }   
+    
+        .wrap {
+
+            .logo_wrap a img.dark {
+                opacity: 1 !important;
+                z-index: 20;
+            }
+
+            .mobile {
+                display: block;
+                width: 3rem;
+                height: 3rem;
+                position: absolute;
+                top: 50%; right: 10px;
+                @include translateY(-50%);
+                z-index: 20;
+
+                .icon {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+
+                    span {
+                        display: block;
+                        background: $black;
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        top: 50%; left: 0;
+                        @include translateY(-50%);
+                        @include transition(all .4s ease-in-out);
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background: $black;
+                            position: absolute;
+                            left: 0; right: 0;
+                            margin: 0 auto;
+                            @include transition(all .4s ease-in-out);
+                        }
+                        
+                        &::before {
+                            top: -1rem;
+                        }
+
+                        &::after {
+                            top: 1rem;
+                        }
+
+                    }
+
+                    &.mobileNavActive span {
+                        background: transparent;
+                        transform: rotate(-180deg); 
+                        @include transition(all .4s ease-in-out);
+
+                        &::before,
+                        &::after {
+                            top: 0;
+                            @include transition(all .4s ease-in-out);
+                        }
+
+                        &::before {
+                            -webkit-transform: rotate(45deg); 
+                            -moz-transform: rotate(45deg); 
+                            transform: rotate(45deg); 
+                        }
+
+                        &::after {
+                            -webkit-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg); 
+                            transform: rotate(-45deg); 
+                        }
+                    }
+                    
+
+                }
+            }
+
+            .nav_wrap {
+                opacity: 0;
+                pointer-events: none;
+                position: fixed;
+                left: 0; right: 0;
+                width: 100%;
+                height: 100%;
+                padding: 10.0rem 10px 0;
+                
+                &.mobile_active {
+                    opacity: 1;
+                    pointer-events: all;
+                    background: rgba(0,0,0,.9);
+                    z-index: 10;
+                    @include transition(all .4s ease-in-out);
+
+                    ul {
+
+                        li {
+                            display: block;
+                            width: 100%;
+        
+                            a {
+                                display: block;
+                                width: 100%;
+                                padding: 2rem 0;
+                                font-size: 2.0rem;
+                                line-height: normal;
+                                text-align: center;
+                                @include transition(none);
+        
+                                &::after {
+                                    display: none;
+                                }
+        
+                            }
+        
+                        }
+                    }
+                    
+                }
+            }
+
+
+        }
+
+    }
+
+}

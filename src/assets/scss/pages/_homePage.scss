@@ -1,0 +1,150 @@
+body.homePage {
+    .main {
+        min-height: auto;
+    }
+}
+
+.homePage_wrap {
+
+    .hero {
+        position: relative;
+        top: 0; left: 0;
+        background-attachment: fixed;
+        background-position: right;
+        background-size: cover;
+        background-image: url('/assets/graphics/homePage/background_img.jpg'); 
+        width: 100%;
+        height: 100%;
+
+        .content_wrap {
+            position: absolute;
+            top: 50%; left: 0; right: 0;
+            padding: 0 10px;
+            margin: 0 auto;
+            @include translateY(-50%);
+            width: 100%;
+            max-width: 111.5rem;
+
+            h1 {
+                font-size: 5.0rem;
+                line-height: 6.0rem;
+                color: $white;
+                font-weight: 700;
+                text-align: center;
+
+            }
+
+            .msg {
+                display: block;
+                width: 100%;
+                max-width: 60.0rem;
+                margin: 0 auto 2rem;
+                font-size: 1.5rem;
+                line-height: 2.4rem;
+                color: $white;
+                font-weight: 400;
+                text-align: center;
+            }
+
+            a {
+                position: relative;
+                display: block;
+                font-size: 1.5rem;
+                line-height: normal;
+                color: $white;
+                font-weight: 400;
+                text-align: center;
+                border: 1px solid $white;
+                max-width: 18.0rem;
+                padding: 1.5rem 0;
+                margin: 6rem auto 0;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $orange;
+                    @include transition(all .4s ease-in-out);
+                    z-index: 1;
+                }
+
+                span {
+                    display: block;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &:hover {
+                    border-color: $orange;
+                    
+                    &::after {
+                        width: 100%;
+                        @include transition(all .4s ease-in-out);
+                    }
+                }
+
+
+            }
+
+        }
+
+        .pageScroll {
+            position: absolute;
+            bottom: 3rem; left: 0; right: 0;
+            margin: 0 auto;
+            display: block;
+            width: 5rem;
+            font-size: 3rem;
+            line-height: normal;
+            color: $white;
+            text-align: center;
+        }
+
+
+
+
+    }
+
+    .spotlights {
+        .item_wrap {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .content {
+        display: block;
+        width: 100%;
+        height: 300px;
+        background: white;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 767px){  
+
+
+    .homePage_wrap {
+        .hero .content_wrap h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+
+        .spotlights {
+            .item_wrap {
+                margin-bottom: 2rem;
+            }
+        }
+
+
+    }
+
+
+
+}

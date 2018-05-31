@@ -1,0 +1,129 @@
+.posts {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    .post {
+        position: relative;
+        width: 33.333333%;
+        height: 55.0rem;
+        float: left;
+        padding: 0 10px;
+        margin: 0 0 2rem;
+        overflow: hidden;
+
+        .wrap {
+            position: relative;
+            height: 100%;
+            background: $white;
+            overflow: hidden;
+            display: block;
+            max-width: 36.0rem;
+            margin: 0 auto;
+
+            .img {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 24.0rem;
+                overflow: hidden;
+                
+                img {
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    display: block;
+                    width: 60.0rem;
+                    margin: 0 auto;
+                    -webkit-transform: translate(-50%, -50%);
+                    -moz-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+            .headline {
+                display: block;
+                width: 100%;
+                padding: 1rem 0;
+
+                a {
+                    font-size: 2.4rem;
+                    line-height: 2.8rem;
+                    color: $black;
+                    font-weight: 400;
+                    text-align: left;
+                }
+            }
+
+            .short_desc {
+                font-size: 1.5rem;
+                line-height: 1.6rem;
+                color: $black;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            .readMore {
+                position: absolute;
+                bottom: 0; left: 0;
+                width: 100%;
+                height: auto;
+                padding: 2.5rem 15px;
+                background: $white;
+                z-index: 1;
+                text-align: right;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 3rem;
+                    z-index: 2;
+                    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,1) 100%);
+                    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,1) 100%);
+                    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 30%,rgba(255,255,255,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+                    top: -3rem; left: 0;
+                }
+            }
+            
+        }
+
+    }
+
+
+
+}
+
+.post {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    .post_banner {
+        display: block;
+        width: 100%;
+        margin: 0 auto 5rem;
+        padding: 0;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 50.0rem;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 767px){  
+
+    .posts .post {
+        width: 100%;
+    }
+
+}

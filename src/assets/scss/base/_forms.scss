@@ -1,0 +1,147 @@
+input, select, textarea, button {
+    font-family: 'Lato',helvetica,arial,clean,sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+    color: $txtCol;
+    outline: none;
+}
+
+input, select, textarea {
+    outline: none;
+    border: 1px solid #979797; 
+}
+
+input[type=text], input[type=password], input[type=submit], input[type=button], select, textarea, button {
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type=radio] { margin: 0 .3rem 0 .6rem; }
+
+input:focus, select:focus, textarea:focus {
+    border-color: #455761;
+}
+
+input:hover, select:hover, textarea:hover {
+    border-color: $black;
+}
+
+.error-label,
+.success-label {
+    clear: both;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    color: $white;
+    font-weight: 500;
+}
+
+.error-label { background: #455761; }
+
+.success-label { background: #00b3bd; }
+
+.form_wrap, .form_row {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.form_wrap {
+    padding: 0 10px;
+
+    .form_row {
+        margin-bottom: 2rem; 
+
+        .form_item {
+
+            .form_label {
+                padding-bottom: 1rem;
+            
+                label {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $txtCol;
+                }
+
+            }
+
+            .form_input {
+                input {
+                    width: 100%;
+                    padding: 9px 12px;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $txtCol;
+                }
+            }
+
+            .form_textarea {
+                textarea {
+                    width: 100%;
+                    padding: 9px 12px;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: $txtCol;
+                }
+            }
+
+            .invalid_msg {
+                display: none;
+                font-size: 1.3rem;
+                color: $red;
+                line-height: normal;
+                padding: 1rem 0 0;
+            }
+
+            &.invalid.dirty {
+
+                .invalid_msg {
+                    display: block;
+                }
+
+            }
+
+        }
+
+    }
+
+
+}
+
+.form_buttons {
+    display: block;
+    width: 100%;
+
+    .btn {
+        position: relative;
+        display: block;
+        font-size: 1.5rem;
+        line-height: normal;
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+        max-width: 18rem;
+        padding: 1.5rem 4.5rem;
+        margin: auto 0;
+        background: $orange;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+
+    }
+
+    .btn, .btn:hover {
+        @include transition(all .4s ease-in-out);
+    }
+
+}

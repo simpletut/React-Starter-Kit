@@ -1,0 +1,4 @@
+{
+    "siteURL": "http://localhost:3000",
+    "axiosInstance_baseURL": "https://api.graphcms.com"
+}
