@@ -1,14 +1,39 @@
+# REACT STARTER KIT
+
 <p align="center">
-    <h1>REACT STARTER KIT</h1>
     <img src="http://git-assets.react-starter-kit.com/logo.png">  
-    <p>Open Source Universal React Redux GraphQL Boilerplate</p>
 </p>
+
+Open Source Universal React Redux GraphQL Boilerplate
+
+[Online Demo](https://react-starter-kit-demo.herokuapp.com)
 
 # Getting Started
 
 This repository contains the source code for React-Starter-Kit. This documentation will cover the installation on your machine, project architecture, unit testing and working with the app in general.
 
 This is a Universal React Redux GraphQL Node app.
+
+## YouTube Video Tutorials
+
+##### Introduction (Getting started)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=g2QWG9sAQqs" target="_blank">
+	<img src="http://img.youtube.com/vi/g2QWG9sAQqs/0.jpg" width="240" height="180" />
+</a>
+
+
+##### Project architecture
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=DfxmoBgPymI " target="_blank">
+	<img src="http://img.youtube.com/vi/DfxmoBgPymI/0.jpg" width="240" height="180" />
+</a>
+
+## Preview
+
+<p align="center">
+    <img src="http://git-assets.react-starter-kit.com/preview.png" style="max-width: 400px;">  
+</p>
 
 ## Software 
 
